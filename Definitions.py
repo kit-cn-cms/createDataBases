@@ -3,15 +3,18 @@
 # edit
 MaxEventsPerTree=400000
 # edit
-OutputDirectoryForMEMTrees="/nfs/dust/cms/user/kelmorab/blrOutputTuples/"
+InputDirectoryForPresortedTrees="/nfs/dust/cms/user/kelmorab/blrOutputTuples/"
+OutputDirectoryForPresortedTrees="/nfs/dust/cms/user/kelmorab/preSortedblrOutputTuples/"
+
+OutputDirectoryForMEMTrees="/nfs/dust/cms/user/kelmorab/preSortedblrOutputTuples/"
 
 InputDirectoryOfMEMTrees="/nfs/dust/cms/user/kelmorab/MEMInputTrees80x_ICHEP_V3/Category_all/"
 OutputDirectoryForMEMDatabase="/nfs/dust/cms/user/kelmorab/MEM_database_new/"
 OutputDirectoryForMEMDatabase_ETH="/nfs/dust/cms/user/mwassmer/MEM_database_ETH/"
-#cmsswpath='/nfs/dust/cms/user/kelmorab/MEMProd/CMSSW_8_0_19/'
-cmsswpath='/nfs/dust/cms/user/kelmorab/MEMDBCMSSW8019/CMSSW_8_0_19/'
-#looperpath='/nfs/dust/cms/user/kelmorab/MEMProd/CMSSW_8_0_19/src/TTH/CommonClassifier/crab/'
-looperpath='/nfs/dust/cms/user/mwassmer/CMSSW_8_0_19/src/TTH/CommonClassifier/crab/'
+cmsswpath='/nfs/dust/cms/user/kelmorab/MEMProd/CMSSW_8_0_19/'
+#cmsswpath='/nfs/dust/cms/user/kelmorab/MEMDBCMSSW8019/CMSSW_8_0_19/'
+looperpath='/nfs/dust/cms/user/kelmorab/MEMProd/CMSSW_8_0_19/src/TTH/CommonClassifier/crab/'
+#looperpath='/nfs/dust/cms/user/mwassmer/CMSSW_8_0_19/src/TTH/CommonClassifier/crab/'
 Samples=[
 	["ttHbb_nominal","ttHbb*nominal.root",400000],
 ["ttHnonbb_nominal","ttHnonbb*nominal.root",400000],

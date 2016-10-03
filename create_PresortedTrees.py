@@ -3,7 +3,7 @@ import ROOT
 import os
 import stat
 import glob
-
+cwd=os.getcwd()
 
 def create_script(cmsswpath,samplesname,rootfile):
     print samplename
@@ -11,8 +11,10 @@ def create_script(cmsswpath,samplesname,rootfile):
     script+='export VO_CMS_SW_DIR=/cvmfs/cms.cern.ch\n'
     script+='source $VO_CMS_SW_DIR/cmsset_default.sh\n'
     script+='cd '+cmsswpath+'src\neval `scram runtime -sh`\n'
-    script+='python '+cmsswpath+'src/MEMDataBase/MEMDataBase/test/verifyDatabase.py '+OutputDirectoryForMEMDatabase+"/"+samplename+' '+samplename+' '+rootfile
-    filename='scripts_databaseVerification/'+samplename+'.sh'
+    script+='python '+cwd+'/presortTree.py '+OutputDirectoryForPresortedTrees+"/"+samplename+'.root'+' '+rootfile
+    if not os.path.exists("scripts_sort"):
+      os.makedirs("scripts_sort")
+    filename='scripts_sort/'+samplename+'.sh'
     f=open(filename,'w')
     f.write(script)
     f.close()
@@ -20,12 +22,14 @@ def create_script(cmsswpath,samplesname,rootfile):
     os.chmod(filename, st.st_mode | stat.S_IEXEC)
     
     
-rootfiles=glob.glob(OutputDirectoryForMEMTrees+'*.root')
-samplenames=[samplename.replace(OutputDirectoryForMEMTrees,"").replace(".root","") for samplename in rootfiles]
+rootfiles=glob.glob(InputDirectoryForPresortedTrees+'*.root')
+samplenames=[samplename.replace(InputDirectoryForPresortedTrees,"").replace(".root","") for samplename in rootfiles]
 #print rootfiles
 #print samplenames
 print samplenames
 raw_input()
 for rootfile,samplename in zip(rootfiles,samplenames):
     print samplename,rootfile
+    if not os.path.exists(OutputDirectoryForMEMDatabase+"/"+samplename):
+      os.makedirs(OutputDirectoryForMEMDatabase+"/"+samplename)
     create_script(cmsswpath,samplename,rootfile)
