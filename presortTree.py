@@ -60,5 +60,5 @@ for ievt, eventnum in sortedzipped:
 
 outtree.AutoSave()
 outf.Close()
-
+print "done"
 

@@ -27,9 +27,9 @@ samplenames=[samplename.replace(InputDirectoryForPresortedTrees,"").replace(".ro
 #print rootfiles
 #print samplenames
 print samplenames
-raw_input()
+#raw_input()
 for rootfile,samplename in zip(rootfiles,samplenames):
     print samplename,rootfile
-    if not os.path.exists(OutputDirectoryForMEMDatabase+"/"+samplename):
-      os.makedirs(OutputDirectoryForMEMDatabase+"/"+samplename)
+    if not os.path.exists(OutputDirectoryForPresortedTrees):
+      os.makedirs(OutputDirectoryForPresortedTrees)
     create_script(cmsswpath,samplename,rootfile)
