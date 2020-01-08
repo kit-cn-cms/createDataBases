@@ -19,7 +19,7 @@ listOfInputTrees=sys.argv[2:]
 
 event=array("l",[0])
 
-intree=ROOT.TChain("tree")
+intree=ROOT.TChain("MVATree")
 for intreefilename in listOfInputTrees:
   print "adding ", intreefilename, " to chain"
   intree.Add(intreefilename)
