@@ -15,7 +15,7 @@ user = "swieland"
 year = "2018
 print "hadding following user: ", user
 
-path = "/pnfs/desy.de/cms/tier2/store/user/{USER}/mem/ttH_MEM_LEG_{year}_v2AB_UserFiles/".format(USER=user, year=year)
+path = "/pnfs/desy.de/cms/tier2/store/user/{USER}/mem/ttH_MEM_LEG_{year}_v2/CRAB_UserFiles/".format(USER=user, year=year)
 print path
 
 samplepaths = glob.glob(path+"crab*")
