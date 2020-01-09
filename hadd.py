@@ -9,27 +9,13 @@ def chunks(l, n):
     for i in range(0, len(l), n):
         yield l[i:i + n]
 
-# 2016
-# vanderli check
-# swieland check
 
-# 2017: check
-# kelmorab check
-# pkeicher check
-# swieland (TTbb) check
-# swieland SingleMuF (running)
-
-# 2018:
-# nshadski check
-# sehnle check
-# pekramer check
-# swieland (TTbb) check
 
 user = "swieland"
-year = "2017"
+year = "2018
 print "hadding following user: ", user
 
-path = "/pnfs/desy.de/cms/tier2/store/user/{USER}/mem/ttH_MEM_LEG_{year}/CRAB_UserFiles/".format(USER=user, year=year)
+path = "/pnfs/desy.de/cms/tier2/store/user/{USER}/mem/ttH_MEM_LEG_{year}_v2AB_UserFiles/".format(USER=user, year=year)
 print path
 
 samplepaths = glob.glob(path+"crab*")
