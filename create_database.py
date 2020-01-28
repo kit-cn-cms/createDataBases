@@ -21,7 +21,7 @@ def create_script(cmsswpath,samplesname,rootfile,year):
     st = os.stat(filename)
     os.chmod(filename, st.st_mode | stat.S_IEXEC)
 
-year = "/2016/"
+year = "/2018/"
     
 rootfiles=glob.glob(OutputDirectoryForMEMTrees+year+'*.root')
 samplenames=[samplename.replace(OutputDirectoryForMEMTrees+year,"").replace(".root","") for samplename in rootfiles]

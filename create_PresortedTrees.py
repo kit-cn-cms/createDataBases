@@ -23,7 +23,7 @@ def create_script(cmsswpath,samplesname,rootfile,year):
     st = os.stat(filename)
     os.chmod(filename, st.st_mode | stat.S_IEXEC)
     
-year = "/2016/"
+year = "/2018/"
 rootfiles=glob.glob(InputDirectoryForPresortedTrees+year+'*.root')
 samplenames=[samplename.replace(InputDirectoryForPresortedTrees+year,"").replace(".root","") for samplename in rootfiles]
 #print rootfiles

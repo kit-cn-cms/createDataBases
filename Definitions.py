@@ -4,11 +4,10 @@
 MaxEventsPerTree=400000
 # edit
 
-InputDirectoryForPresortedTrees="/nfs/dust/cms/user/swieland/ttH_legacy/MEMdatabase/MEMs//"
-OutputDirectoryForPresortedTrees="/nfs/dust/cms/user/swieland/ttH_legacy/MEMdatabase/MEMs/presorted/"
-OutputDirectoryForMEMTrees="/nfs/dust/cms/user/swieland/ttH_legacy/MEMdatabase/MEMs/presorted/"
-OutputDirectoryForMEMDatabase="/nfs/dust/cms/user/swieland/ttH_legacy/MEMdatabase/databases/"
-
+InputDirectoryForPresortedTrees  ="/nfs/dust/cms/user/vdlinden/legacyTTH/memes/rootfiles/"
+OutputDirectoryForPresortedTrees ="/nfs/dust/cms/user/vdlinden/legacyTTH/memes/presortedTrees/"
+OutputDirectoryForMEMTrees       ="/nfs/dust/cms/user/vdlinden/legacyTTH/memes/presortedTrees/"
+OutputDirectoryForMEMDatabase    ="/nfs/dust/cms/user/vdlinden/legacyTTH/memes/memDBs/"
 
 cmsswpath='/nfs/dust/cms/user/swieland/ttH_legacy/MEMdatabase/CMSSW_8_0_26_patch2/'
 #cmsswpath='/nfs/dust/cms/user/kelmorab/MEMDBCMSSW8019/CMSSW_8_0_19/'
